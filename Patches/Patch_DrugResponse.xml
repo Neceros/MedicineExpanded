@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>	
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Drug Response</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/ThingDef[defName="Acetamol" or defName="Opimol" or defName="Vicomol" or defName="Oxymol"]</xpath>
+					<value>
+						<li Class="MSPainless.MSPainDrug">
+							<ManagesPain>true</ManagesPain>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

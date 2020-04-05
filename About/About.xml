@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Medicine Expanded</name>
+  <author>Neceros</author>
+  <supportedVersions>
+      <li>1.1</li>
+  </supportedVersions>
+  <packageId>neceros.medicineexpanded</packageId>
+  <description>“Let food be your medicine and medicine be your food.”\n― Hippocrates</description>
+</ModMetaData>

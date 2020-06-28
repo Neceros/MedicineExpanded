@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Recipe Users: DrugLab -->
+
+  <Make_Acetamol.label>アセタモール錠を造る</Make_Acetamol.label>
+  <Make_Acetamol.description>アセタモール錠を造ります。</Make_Acetamol.description>
+  <Make_Acetamol.jobString>アセタモール錠を製造中</Make_Acetamol.jobString>
+
+  <Make_Immunitol.label>イミュニトール注射を造る</Make_Immunitol.label>
+  <Make_Immunitol.description>イミュニトール注射を造ります。</Make_Immunitol.description>
+  <Make_Immunitol.jobString>イミュニトール注射を製造中</Make_Immunitol.jobString>
+
+
+  <!-- Recipe Users: CraftingSpot, DrugLab -->
+
+  <Make_Opimol.label>オピモール軟膏を作る</Make_Opimol.label>
+  <Make_Opimol.description>オピモール軟膏を作ります。</Make_Opimol.description>
+  <Make_Opimol.jobString>オピモール軟膏を作成中</Make_Opimol.jobString>
+
+  <!-- Recipe Users: DrugLab -->
+
+  <Make_Vicomol.label>ビコモール錠を作る</Make_Vicomol.label>
+  <Make_Vicomol.description>ビコモール錠を作ります。</Make_Vicomol.description>
+  <Make_Vicomol.jobString>ビコモール錠を作成中</Make_Vicomol.jobString>
+
+  <Make_Oxymol.label>オキシモール錠を作る</Make_Oxymol.label>
+  <Make_Oxymol.description>オキシモール錠を作ります。</Make_Oxymol.description>
+  <Make_Oxymol.jobString>オキシモール錠を作成中</Make_Oxymol.jobString>
+
+</LanguageData>

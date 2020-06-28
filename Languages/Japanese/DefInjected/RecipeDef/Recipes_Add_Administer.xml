@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Administer_Acetamol.label>アセタモール錠を投与する</Administer_Acetamol.label>
+  <Administer_Acetamol.jobString>アセタモール錠を投与中</Administer_Acetamol.jobString>
+
+  <Administer_Immunitol.label>イミュニトールを注射する</Administer_Immunitol.label>
+  <Administer_Immunitol.jobString>イミュニトールを注射中</Administer_Immunitol.jobString>
+
+  <Administer_Opimol.label>オピモール軟膏を投与する</Administer_Opimol.label>
+  <Administer_Opimol.jobString>オピモール軟膏を投与中</Administer_Opimol.jobString>
+
+  <Administer_Vicomol.label>ビコモール錠を投与する</Administer_Vicomol.label>
+  <Administer_Vicomol.jobString>ビコモール錠を投与中</Administer_Vicomol.jobString>
+
+  <Administer_Oxymol.label>オキシモール錠を投与する</Administer_Oxymol.label>
+  <Administer_Oxymol.jobString>オキシモール錠を投与中</Administer_Oxymol.jobString>
+
+</LanguageData>

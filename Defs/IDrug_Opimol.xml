@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="MakeableDrugBase">
     <defName>Opimol</defName>
-    <label>opimol</label>
-    <description>Opimol is a decent painkiller with mild addiction qualities. It's processed with healroot &amp; psychoid leaves, and water into an oatmeal-like substance. Eaten, smoked, or used in more potent painkiller recipes.</description>
+    <label>opimol paste</label>
+    <description>Opimol is a decent painkiller with mild addiction qualities. It's processed with healroot, water, &amp; psychoid leaves. Raw opimol is an oatmeal-like substance. Eaten, smoked, in a tonic, or used in more potent painkiller recipes. \n\nUpsets the stomach and causes major loss in consciousness.</description>
     <descriptionHyperlinks>
       <HediffDef>OpimolHigh</HediffDef>
       <HediffDef>OpimolTolerance</HediffDef>
@@ -19,17 +19,17 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>1200</WorkToMake>
-      <MarketValue>7</MarketValue>
+      <MarketValue>15</MarketValue>
       <Mass>0.02</Mass>
     </statBases>
     <techLevel>Neolithic</techLevel>
     <ingestible>
-      <foodType>Processed</foodType>
-      <joy>0.27</joy>
+      <foodType>Plant, Processed</foodType>
+      <joy>0.80</joy>
       <joyKind>Chemical</joyKind>
-      <baseIngestTicks>1270</baseIngestTicks>
-      <nurseable>true</nurseable>
-      <drugCategory>Social</drugCategory>
+      <baseIngestTicks>150</baseIngestTicks>
+      <nurseable>false</nurseable>
+      <drugCategory>Hard</drugCategory>
       <ingestSound>Ingest_Smoke</ingestSound>
       <ingestEffect>Smoke_Joint</ingestEffect>
       <ingestEffectEat>EatVegetarian</ingestEffectEat>
@@ -56,16 +56,16 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>OpimolHigh</hediffDef>
-          <severity>0.35</severity>
+          <severity>0.75</severity>
           <toleranceChemical>OpimolReceptors</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
-          <offset>-0.2</offset>
+          <offset>-0.33</offset>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>OpimolTolerance</hediffDef>
-          <severity>0.02</severity>
+          <severity>0.05</severity>
           <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
@@ -78,17 +78,18 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <MedicineHerbal>2</MedicineHerbal>
+      <MedicineHerbal>1</MedicineHerbal>
+      <PsychoidLeaves>4</PsychoidLeaves>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>OpimolReceptors</chemical>
-        <addictiveness>0.2</addictiveness>
-        <minToleranceToAddict>0.5</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.2</existingAddictionSeverityOffset>
+        <addictiveness>0.025</addictiveness>
+        <minToleranceToAddict>0.65</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.3</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
-        <listOrder>20</listOrder>
-        <overdoseSeverityOffset>0.08~0.12</overdoseSeverityOffset>
+        <listOrder>100</listOrder>
+        <overdoseSeverityOffset>0.08~0.15</overdoseSeverityOffset>
         <largeOverdoseChance>0.005</largeOverdoseChance>
       </li>
     </comps>
@@ -99,24 +100,25 @@
     <hediffClass>HediffWithComps</hediffClass>
     <label>high on opimol</label>
     <description>Active opimol in the body, causing a euphoric high and relaxation.</description>
-    <defaultLabelColor>(0.4,0,1)</defaultLabelColor>
+    <defaultLabelColor>(0.5,0.5,0)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.0</severityPerDay>
+        <severityPerDay>-1.75</severityPerDay>
       </li>
     </comps>
       <stages>
         <li>
           <label>opimol high</label>
           <restFallFactor>1.25</restFallFactor>
-          <painOffset>-0.10</painOffset>
-          <painFactor>0.85</painFactor>
+          <socialFightChanceFactor>0.75</socialFightChanceFactor>
+          <painOffset>-0.5</painOffset>
+          <vomitMtbDays>1</vomitMtbDays>
           <capMods>
             <li>
               <capacity>Consciousness</capacity>
-              <postFactor>0.80</postFactor>
+              <offset>-0.60</offset>
             </li>
             <!--
             <li>
@@ -136,8 +138,8 @@
           <hediffGivers>
             <li Class="HediffGiver_RandomDrugEffect">
               <hediff>Asthma</hediff>
-              <baseMtbDays>180</baseMtbDays>
-              <minSeverity>0.25</minSeverity>
+              <baseMtbDays>720</baseMtbDays>
+              <minSeverity>0.75</minSeverity>
               <partsToAffect>
                 <li>Lung</li>
               </partsToAffect>
@@ -145,10 +147,19 @@
             </li>
             <li Class="HediffGiver_RandomDrugEffect">
               <hediff>Carcinoma</hediff>
-              <baseMtbDays>180</baseMtbDays>
-              <minSeverity>0.40</minSeverity>
+              <baseMtbDays>360</baseMtbDays>
+              <minSeverity>0.75</minSeverity>
               <partsToAffect>
-                <li>Lung</li>
+                <li>Liver</li>
+              </partsToAffect>
+              <countToAffect>1</countToAffect>
+            </li>
+            <li Class="HediffGiver_RandomDrugEffect">
+              <hediff>Carcinoma</hediff>
+              <baseMtbDays>360</baseMtbDays>
+              <minSeverity>0.75</minSeverity>
+              <partsToAffect>
+                <li>Kidney</li>
               </partsToAffect>
               <countToAffect>1</countToAffect>
             </li>
@@ -163,11 +174,11 @@
     <hediff>OpimolHigh</hediff>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
-    <li>
-      <label>opimol high</label>
-      <description>This is nice. That really takes the edge off the pain.</description>
-      <baseMoodEffect>10</baseMoodEffect>
-    </li>
+      <li>
+        <label>opimol high</label>
+        <description>This feels so good...</description>
+        <baseMoodEffect>25</baseMoodEffect>
+      </li>
     </stages>
   </ThoughtDef>
 
@@ -181,6 +192,15 @@
     <addictionHediff>OpimolAddiction</addictionHediff>
     <toleranceHediff>OpimolTolerance</toleranceHediff>
     <onGeneratedAddictedToleranceChance>0.25</onGeneratedAddictedToleranceChance>
+    <onGeneratedAddictedEvents>
+      <li>
+        <hediff>ChemicalDamageSevere</hediff>
+        <chance>0.15</chance>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </onGeneratedAddictedEvents>
   </ChemicalDef>
 
   <NeedDef ParentName="DrugAddictionNeedBase">
@@ -188,7 +208,7 @@
     <needClass>Need_Chemical</needClass>
     <label>opimol</label>
     <description>Because of an opimol addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
-    <listPriority>25</listPriority>
+    <listPriority>50</listPriority>
   </NeedDef>
   
   <HediffDef ParentName="DrugToleranceBase">
@@ -197,7 +217,7 @@
     <description>A built-up tolerance to opimol. The more severe this tolerance is, the more opimol-based drugs like vicomol or oxymol it takes to get the same effect.</description>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.015</severityPerDay>
+        <severityPerDay>-0.020</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
         <chemical>OpimolReceptors</chemical>
@@ -206,8 +226,8 @@
     <hediffGivers>
       <li Class="HediffGiver_RandomDrugEffect">
         <hediff>ChemicalDamageSevere</hediff>
-        <baseMtbDays>120</baseMtbDays>
-        <minSeverity>0.50</minSeverity>
+        <baseMtbDays>240</baseMtbDays>
+        <minSeverity>0.65</minSeverity>
         <partsToAffect>
           <li>Liver</li>
         </partsToAffect>
@@ -215,10 +235,10 @@
       </li>
       <li Class="HediffGiver_RandomDrugEffect">
         <hediff>ChemicalDamageModerate</hediff>
-        <baseMtbDays>180</baseMtbDays>
+        <baseMtbDays>420</baseMtbDays>
         <minSeverity>0.80</minSeverity>
         <partsToAffect>
-          <li>Brain</li>
+          <li>Kidney</li>
         </partsToAffect>
         <countToAffect>1</countToAffect>
       </li>
@@ -235,6 +255,7 @@
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.05</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
       </li>
     </comps>
     <stages>
@@ -242,18 +263,13 @@
       </li>
       <li>
         <label>withdrawal</label>
-        <restFallFactor>1.30</restFallFactor>
+        <restFallFactorOffset>1.5</restFallFactorOffset>
         <painFactor>1.15</painFactor>
-        <vomitMtbDays>1</vomitMtbDays>
+        <vomitMtbDays>0.5</vomitMtbDays>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <setMax>0.90</setMax>
-          </li>
-          <!--
-          <li>
-            <capacity>Consciousness</capacity>
-            <postFactor>-0.20</postFactor>
+            <offset>-0.20</offset>
           </li>
           <li>
             <capacity>Moving</capacity>
@@ -261,13 +277,12 @@
           </li>
           <li>
             <capacity>Manipulation</capacity>
-            <setMax>-0.20</setMax>
+            <offset>-0.20</offset>
           </li>
-          -->
         </capMods>
         <statOffsets>
           <MentalBreakThreshold>0.8</MentalBreakThreshold>
-          <RestRateMultiplier>-0.33</RestRateMultiplier>
+          <RestRateMultiplier>-0.25</RestRateMultiplier>
         </statOffsets>
         <mentalStateGivers>
           <li>
@@ -290,24 +305,12 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>opimol withdrawal initial</label>
-        <description>This pain sucks. I need just a little more painkiller...</description>
-        <baseMoodEffect>-7</baseMoodEffect>
+        <visible>false</visible>
       </li>
       <li>
         <label>opimol withdrawal strong</label>
-        <description>Gotta find more opimol. I can't think of much else!</description>
-        <baseMoodEffect>-12</baseMoodEffect>
-      </li>
-      <li>
-        <label>opimol withdrawal itense</label>
-        <description>Please help! Everything hurts and I can't keep anything down! Get me anything to numb the pain!</description>
-        <baseMoodEffect>-17</baseMoodEffect>
-      </li>
-      <li>
-        <label>opimol withdrawal extreme</label>
-        <description>I CAN'T BEAR IT! I might die, this might be how I die!</description>
-        <baseMoodEffect>-22</baseMoodEffect>
+        <description>I feel like shit. Need to find more opimol!</description>
+        <baseMoodEffect>-30</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

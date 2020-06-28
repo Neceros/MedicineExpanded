@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>Miasma</defName>
+    <label>miasma sage</label>
+    <description>Miasma sage is a curated mix of many herbs, spices, and mineral powder. This substance is bound together and balmed onto their face and neck. Helps to block diseases and poisons.</description>
+    <descriptionHyperlinks>
+      <HediffDef>MiasmaEffect</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Miasma</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>57</WorkToMake>
+      <MarketValue>4</MarketValue>
+      <Mass>0.01</Mass>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Flammability>1</Flammability>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <baseIngestTicks>800</baseIngestTicks>
+      <nurseable>false</nurseable>
+      <drugCategory>Medical</drugCategory>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Smearing {0} balm</ingestCommandString>
+      <ingestReportString>Smearing {0} balm.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MiasmaEffect</hediffDef>
+          <severity>1.0</severity>
+          <toleranceChemical>MiasmaChemical</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    </recipeMaker>
+    <costList>
+      <MedicineHerbal>4</MedicineHerbal>
+    </costList>
+  </ThingDef>
+
+
+  <ChemicalDef>
+    <defName>MiasmaChemical</defName>
+    <label>Miasma chemical interface</label>
+    <addictionHediff>MiasmaAddiction</addictionHediff>
+    <toleranceHediff>MiasmaTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.0</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>MiasmaNeed</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Miasma need</label>
+    <description>Miasma is non addictive, but here we are. How did you do this?</description>
+    <listPriority>25</listPriority>
+  </NeedDef>
+
+  <HediffDef>
+    <defName>MiasmaEffect</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>miasma boosted</label>
+    <description>Active miasma sage covering the face and neck, which helps protect the user from diseases and poisons.</description>
+    <labelNoun>miasma balm</labelNoun>
+    <defaultLabelColor>(0.5,0.5,0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.20</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <statOffsets>
+            <ToxicSensitivity>0.50</ToxicSensitivity>
+          </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>MiasmaTolerance</defName>
+    <label>Miasma tolerance</label>
+    <description>Miasma tolerance is easy to shake and doesn't have a withdrawal. If your tolerance is increased too high you may suffer liver damage. Take infrequently.</description>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.25</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>MiasmaChemical</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <baseMtbDays>60</baseMtbDays>
+        <minSeverity>0.75</minSeverity>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+        <countToAffect>1</countToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>MiasmaAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>Miasma addiction</label>
+    <description>Miasma is non addictive, but can cause liver damage.</description>
+    <causesNeed>MiasmaNeed</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-100.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>5000</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MiasmaOverdose</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Miasma overdose</label>
+    <description>Miasma should be taken infrequently in order to reduce the chance of liver failure. Some caution should be used.</description>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-.40</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial</label>
+        <minSeverity>.1</minSeverity>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.35</minSeverity>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.5</minSeverity>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.8</minSeverity>
+      </li>
+      <li>
+        <label>dangerous</label>
+        <minSeverity>.9</minSeverity>
+        <hediffGivers>
+          <li Class="HediffGiver_RandomDrugEffect">
+            <baseMtbDays>.33</baseMtbDays>
+            <hediff>ChemicalDamageModerate</hediff>
+            <partsToAffect>
+              <li>Liver</li>
+            </partsToAffect>
+            <countToAffect>1</countToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+-->
+</Defs>

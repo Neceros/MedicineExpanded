@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ImmunitolEffect.label>イミュニトール効果</ImmunitolEffect.label>
+  <ImmunitolEffect.description>体内でイミュニトールが活性化された状態です。免疫獲得速度を上昇させますが、長続きしません。短期間での連続使用は注意が必要です。</ImmunitolEffect.description>
+  <ImmunitolEffect.labelNoun>イミュニトール注射</ImmunitolEffect.labelNoun>
+
+  <ImmunitolTolerance.label>イミュニトール耐性</ImmunitolTolerance.label>
+  <ImmunitolTolerance.description>イミュニトール耐性は起こりやすく、離脱症状はありません。耐性が高すぎると、肝機能障害を起こす可能性があります。慎重に利用してください。</ImmunitolTolerance.description>
+  <ImmunitolTolerance.stages.small-0.label>軽度</ImmunitolTolerance.stages.small-0.label>
+  <ImmunitolTolerance.stages.small-1.label>軽度</ImmunitolTolerance.stages.small-1.label>
+  <ImmunitolTolerance.stages.large.label>重度</ImmunitolTolerance.stages.large.label>
+  <ImmunitolTolerance.stages.massive.label>極度</ImmunitolTolerance.stages.massive.label>
+
+  <ImmunitolAddiction.label>イミュニトール依存症</ImmunitolAddiction.label>
+  <ImmunitolAddiction.description>イミュニトールは依存症を起こす中毒性はありませんが、肝障害を引き起こす可能性があります。</ImmunitolAddiction.description>
+  <ImmunitolAddiction.stages.withdrawal.label>離脱症状</ImmunitolAddiction.stages.withdrawal.label>
+
+  <ImmunitolOverdose.label>イミュニトール過剰摂取</ImmunitolOverdose.label>
+  <ImmunitolOverdose.description>イミュニトールは、肝機能不全を起こす可能性を減らすため、頻度を下げて服用する必要があります。少し注意が必要です。</ImmunitolOverdose.description>
+  <ImmunitolOverdose.stages.initial.label>初期</ImmunitolOverdose.stages.initial.label>
+  <ImmunitolOverdose.stages.minor.label>軽度</ImmunitolOverdose.stages.minor.label>
+  <ImmunitolOverdose.stages.moderate.label>中度</ImmunitolOverdose.stages.moderate.label>
+  <ImmunitolOverdose.stages.major.label>重度</ImmunitolOverdose.stages.major.label>
+  <ImmunitolOverdose.stages.dangerous.label>危機</ImmunitolOverdose.stages.dangerous.label>
+
+</LanguageData>

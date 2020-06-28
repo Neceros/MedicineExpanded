@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>Immunitol</defName>
+    <label>immunitol injection</label>
+    <description>Immunitol is a pressed pill that stimulates the body's ability to fight disease and virus: with a heightened immune system! Be careful with use: too much in a short time can cause liver damage.</description>
+    <descriptionHyperlinks>
+      <HediffDef>ImmunitolEffect</HediffDef>
+      <HediffDef>ImmunitolAddiction</HediffDef>
+      <HediffDef>ImmunitolTolerance</HediffDef>
+      <HediffDef>ImmunitolOverdose</HediffDef>
+      <HediffDef>ChemicalDamageModerate</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Immunitol</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>450</WorkToMake>
+      <MarketValue>11</MarketValue>
+      <Mass>0.01</Mass>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Flammability>1</Flammability>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <baseIngestTicks>120</baseIngestTicks>
+      <nurseable>false</nurseable>
+      <drugCategory>Medical</drugCategory>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting immunitol {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ImmunitolEffect</hediffDef>
+          <severity>1.0</severity>
+          <toleranceChemical>ImmunitolChemical</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ImmunitolOverdose</hediffDef>
+          <severity>.35</severity>
+          <toleranceChemical>ImmunitolChemical</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>Research_AdvancedMedicine</researchPrerequisite>
+      <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    </recipeMaker>
+    <costList>
+      <MedicineHerbal>1</MedicineHerbal>
+      <SmokeleafLeaves>3</SmokeleafLeaves>
+      <Steel>1</Steel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>ImmunitolChemical</chemical>
+        <addictiveness>0.000</addictiveness>
+        <minToleranceToAddict>999</minToleranceToAddict>
+        <overdoseSeverityOffset>
+          <min>0.05</min>
+          <max>0.15</max>
+        </overdoseSeverityOffset>
+        <listOrder>100</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ChemicalDef>
+    <defName>ImmunitolChemical</defName>
+    <label>Immunitol chemical interface</label>
+    <addictionHediff>ImmunitolAddiction</addictionHediff>
+    <toleranceHediff>ImmunitolTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.0</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>ImmunitolNeed</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Immunitol need</label>
+    <description>Immunitol is non addictive, but here we are. How did you do this?</description>
+    <listPriority>25</listPriority>
+  </NeedDef>
+
+  <HediffDef>
+    <defName>ImmunitolEffect</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Immunitol boosted</label>
+    <description>Active immunitol in the body. Increases immunity gain speed but it doesn't last very long. Be careful with repeated use.</description>
+    <labelNoun>immunitol injection</labelNoun>
+    <defaultLabelColor>(0.5,0.5,0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-30</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <statOffsets>
+            <ImmunityGainSpeed>2</ImmunityGainSpeed>
+          </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>ImmunitolTolerance</defName>
+    <label>Immunitol tolerance</label>
+    <description>Immunitol tolerance is easy to shake and doesn't have a withdrawal. If your tolerance is increased too high you may suffer liver damage. Take infrequently.</description>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.25</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>ImmunitolChemical</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <baseMtbDays>60</baseMtbDays>
+        <minSeverity>0.75</minSeverity>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+        <countToAffect>1</countToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>ImmunitolAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>Immunitol addiction</label>
+    <description>Immunitol is non addictive, but can cause liver damage.</description>
+    <causesNeed>ImmunitolNeed</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-100.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>5000</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>ImmunitolOverdose</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Immunitol overdose</label>
+    <description>Immunitol should be taken infrequently in order to reduce the chance of liver failure. Some caution should be used.</description>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-.40</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial</label>
+        <minSeverity>.1</minSeverity>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.35</minSeverity>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.5</minSeverity>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.8</minSeverity>
+      </li>
+      <li>
+        <label>dangerous</label>
+        <minSeverity>.9</minSeverity>
+        <hediffGivers>
+          <li Class="HediffGiver_RandomDrugEffect">
+            <baseMtbDays>.33</baseMtbDays>
+            <hediff>ChemicalDamageModerate</hediff>
+            <partsToAffect>
+              <li>Liver</li>
+            </partsToAffect>
+            <countToAffect>1</countToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

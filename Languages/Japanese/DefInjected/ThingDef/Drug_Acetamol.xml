@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Acetamol.label>アセタモール錠</Acetamol.label>
+  <Acetamol.description>アセタモールはヒールルートとサイコイドの葉から抽出される化合物です。このドラッグは細かい粉末に加工されて、最終的に白い小さな錠剤になります。</Acetamol.description>
+  <Acetamol.ingestible.ingestCommandString>{0}を 摂る</Acetamol.ingestible.ingestCommandString>
+  <Acetamol.ingestible.ingestReportString>{0}を 摂っている</Acetamol.ingestible.ingestReportString>
+  <Acetamol.ingestible.ingestReportStringEat>{0}を 摂取中</Acetamol.ingestible.ingestReportStringEat>
+
+</LanguageData>

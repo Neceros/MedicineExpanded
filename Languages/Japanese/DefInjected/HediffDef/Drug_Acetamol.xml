@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Acetamol.label>痛み止め(アセタモール)</Acetamol.label>
+  <Acetamol.description>体内でアセタモールを活性化して、軽い痛みを緩和します。</Acetamol.description>
+  <Acetamol.labelNoun>アセタモール摂取</Acetamol.labelNoun>
+
+  <Acetamol_Overdose.label>アセタモール過剰摂取</Acetamol_Overdose.label>
+  <Acetamol_Overdose.description>アセタモールは、短期間に大量摂取しない限り、それほど危険ではありません。しかし過剰摂取した時点で肝機能障害が発生する可能性があります。</Acetamol_Overdose.description>
+  <Acetamol_Overdose.stages.initial.label>初期</Acetamol_Overdose.stages.initial.label>
+  <Acetamol_Overdose.stages.minor.label>軽度</Acetamol_Overdose.stages.minor.label>
+  <Acetamol_Overdose.stages.moderate.label>中度</Acetamol_Overdose.stages.moderate.label>
+  <Acetamol_Overdose.stages.major.label>重度</Acetamol_Overdose.stages.major.label>
+  <Acetamol_Overdose.stages.massive.label>極度</Acetamol_Overdose.stages.massive.label>
+
+</LanguageData>

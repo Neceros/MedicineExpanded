@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <ExpandedProduceMedicineBulk.label>医薬品 x4</ExpandedProduceMedicineBulk.label>
+  <ExpandedProduceMedicineBulk.description>医薬品をまとめて作る。</ExpandedProduceMedicineBulk.description>
+  <ExpandedProduceMedicineBulk.jobString>医薬品を4つ作成中</ExpandedProduceMedicineBulk.jobString>
+
+</LanguageData>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <OpimolHigh.label>オピモールによる興奮状態</OpimolHigh.label>
+  <OpimolHigh.description>体内で活性化したオピモールは、高い陶酔感と安堵感を引き起こします。</OpimolHigh.description>
+  <OpimolHigh.stages.opimol_high.label>オピモール・ハイ</OpimolHigh.stages.opimol_high.label>
+
+
+  <!-- Opimol addiction -->
+
+  <OpimolTolerance.label>オピモール耐性</OpimolTolerance.label>
+  <OpimolTolerance.description>オピモールに対する耐性の蓄積です。この耐性がより高いほど、同じ効果を得るのにビコモールやオキシモールなどのオピモール系ドラッグの摂取量が増加します。</OpimolTolerance.description>
+  <OpimolTolerance.stages.small-0.label>軽度</OpimolTolerance.stages.small-0.label>
+  <OpimolTolerance.stages.small-1.label>軽度</OpimolTolerance.stages.small-1.label>
+  <OpimolTolerance.stages.large.label>重度</OpimolTolerance.stages.large.label>
+  <OpimolTolerance.stages.massive.label>極度</OpimolTolerance.stages.massive.label>
+
+  <OpimolAddiction.label>オピモール依存症</OpimolAddiction.label>
+  <OpimolAddiction.description>オピモールに対しての化学物質による中毒症状。長期にわたるオピモール摂取は、細胞レベルで神経学的な適応反応を引き起こし、脳はドラッグなしではもう適切に機能しませ。\n\nオピモールやビコモールなどのドラッグから定期的にオピモール摂取がなければ、離脱症状が始まります。しかし、長期間摂取禁止を続けることで、少しずつ脳は通常の状態に戻るようになり、依存症は解消されます。</OpimolAddiction.description>
+  <OpimolAddiction.stages.withdrawal.label>離脱症状</OpimolAddiction.stages.withdrawal.label>
+
+</LanguageData>

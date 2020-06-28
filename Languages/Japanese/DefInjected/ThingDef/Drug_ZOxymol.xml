@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Oxymol.label>オキシモール錠</Oxymol.label>
+  <Oxymol.description>オキシモールは素晴らしい鎮痛剤ですが、中毒になる可能性が高いです。オピモール、ニュートロアミン、シルバーを混合させたものを錠剤の形に成型されます。中毒性が高く、控えめに使用しない危険です。過剰摂取する可能性が高い。</Oxymol.description>
+  <Oxymol.ingestible.ingestCommandString>{0}を 摂取する</Oxymol.ingestible.ingestCommandString>
+  <Oxymol.ingestible.ingestReportString>{0}を 摂取している.</Oxymol.ingestible.ingestReportString>
+
+</LanguageData>

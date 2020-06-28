@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Opimol addiction -->
+
+  <OpimolChemical.label>オピモール</OpimolChemical.label>
+  <OpimolChemical.description>オピモール依存症なので、この人物は離脱症状を避けるために定期的にドラッグを摂取する必要があります。</OpimolChemical.description>
+
+</LanguageData>

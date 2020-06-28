@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Research_OpimolRefining.label>オピモール精製</Research_OpimolRefining.label>
+  <Research_OpimolRefining.description>より強力な麻酔薬の基礎となる穏やかな習慣性を持つ鎮痛剤に天然成分を配合する方法を研究します。</Research_OpimolRefining.description>
+
+  <Research_AdvancedOpimolRefining.label>先進オピモール精製</Research_AdvancedOpimolRefining.label>
+  <Research_AdvancedOpimolRefining.description>強力な鎮痛剤を製造するために医薬品の成分を処理する方法を研究します。</Research_AdvancedOpimolRefining.description>
+
+  <Research_AdvancedMedicine.label>先進的な医薬品</Research_AdvancedMedicine.label>
+  <Research_AdvancedMedicine.description>一般的な健康上の問題を解決する特定の解決手段を作成する方法を研究します。</Research_AdvancedMedicine.description>
+
+</LanguageData>

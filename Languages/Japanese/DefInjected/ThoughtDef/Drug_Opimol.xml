@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <OpimolHigh.stages.opimol_high.label>オピモール・ハイ</OpimolHigh.stages.opimol_high.label>
+  <OpimolHigh.stages.opimol_high.description>これはいい。本当に痛みが和らいだ。</OpimolHigh.stages.opimol_high.description>
+
+
+  <!-- Opimol addiction -->
+
+  <OpimolWithdrawal.stages.opimol_withdrawal_initial.label>オピモール離脱症状:初期</OpimolWithdrawal.stages.opimol_withdrawal_initial.label>
+  <OpimolWithdrawal.stages.opimol_withdrawal_initial.description>この痛みは辛い。もう少し鎮痛剤が必要だ...</OpimolWithdrawal.stages.opimol_withdrawal_initial.description>
+  <OpimolWithdrawal.stages.opimol_withdrawal_strong.label>オピモール離脱症状:強烈</OpimolWithdrawal.stages.opimol_withdrawal_strong.label>
+  <OpimolWithdrawal.stages.opimol_withdrawal_strong.description>もっといいものを見つけないと。他のことは考えられない！</OpimolWithdrawal.stages.opimol_withdrawal_strong.description>
+  <OpimolWithdrawal.stages.opimol_withdrawal_itense.label>オピモール離脱症状:激烈</OpimolWithdrawal.stages.opimol_withdrawal_itense.label>
+  <OpimolWithdrawal.stages.opimol_withdrawal_itense.description>助けて！体中が痛くて、何も抑えられない！痛みを和らげるために何としても手に入れないと！</OpimolWithdrawal.stages.opimol_withdrawal_itense.description>
+  <OpimolWithdrawal.stages.opimol_withdrawal_extreme.label>オピモール離脱症状:末期</OpimolWithdrawal.stages.opimol_withdrawal_extreme.label>
+  <OpimolWithdrawal.stages.opimol_withdrawal_extreme.description>耐えられない！死ぬかもしれない、このまま私は死んでしまうかも！</OpimolWithdrawal.stages.opimol_withdrawal_extreme.description>
+
+</LanguageData>

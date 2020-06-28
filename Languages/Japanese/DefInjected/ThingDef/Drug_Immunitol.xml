@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Immunitol.label>イミュニトール注射</Immunitol.label>
+  <Immunitol.description>イミュニトールは、病気やウイルスと闘う肉体機能を活性化する注射剤です。短時間に多量に使用すると、肝機能障害を起こすことがあるので注意が必要です。</Immunitol.description>
+  <Immunitol.ingestible.ingestCommandString>{0}を 打つ</Immunitol.ingestible.ingestCommandString>
+  <Immunitol.ingestible.ingestReportString>イミュニトール{0}を 注射中</Immunitol.ingestible.ingestReportString>
+
+</LanguageData>

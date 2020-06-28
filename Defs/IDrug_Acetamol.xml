@@ -3,7 +3,7 @@
 
   <ThingDef ParentName="MakeableDrugBase">
     <defName>Acetamol</defName>
-    <label>acetamol</label>
+    <label>acetamol pill</label>
     <description>Acetamol is a compound extracted from the roots of the healroot and psychoid plants. The drug is processed into fine powder and eventually a small white pill.</description>
     <descriptionHyperlinks>
       <HediffDef>Acetamol</HediffDef>
@@ -17,14 +17,14 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>450</WorkToMake>
-      <MarketValue>5</MarketValue>
+      <MarketValue>11</MarketValue>
       <Mass>0.005</Mass>
       <DeteriorationRate>1</DeteriorationRate>
       <Flammability>1</Flammability>
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
-      <foodType>Processed</foodType>
+      <foodType>Plant, Processed</foodType>
       <baseIngestTicks>200</baseIngestTicks>
       <nurseable>true</nurseable>
       <drugCategory>Medical</drugCategory>
@@ -54,7 +54,7 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>Acetamol</hediffDef>
-          <severity>1.0</severity>
+          <severity>0.75</severity>
           <toleranceChemical>Acetamol</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
@@ -73,6 +73,7 @@
     </recipeMaker>
     <costList>
       <MedicineHerbal>1</MedicineHerbal>
+      <WoodLog>1</WoodLog>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
@@ -92,15 +93,6 @@
     <label>acetamol</label>
     <addictionHediff>PsychiteAddiction</addictionHediff>
     <toleranceHediff>PsychiteTolerance</toleranceHediff>
-    <onGeneratedAddictedEvents>
-      <li>
-        <hediff>ChemicalDamageSevere</hediff>
-        <chance>0</chance>
-        <partsToAffect>
-          <li>Brain</li>
-        </partsToAffect>
-      </li>
-    </onGeneratedAddictedEvents>
     <onGeneratedAddictedToleranceChance>0.0</onGeneratedAddictedToleranceChance>
   </ChemicalDef>
 
@@ -110,18 +102,24 @@
     <label>Pain suppressed (acetamol)</label>
     <description>Active acetamol in the body, inducing minor pain relief.</description>
     <labelNoun>acetamol ingestion</labelNoun>
-    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <defaultLabelColor>(0.5,0.5,0)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1</maxSeverity>
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1</severityPerDay>
+        <severityPerDay>-1.2</severityPerDay>
       </li>
     </comps>
       <stages>
         <li>
-          <painFactor>0.80</painFactor>
+          <painOffset>-0.20</painOffset>
+          <capMods>
+            <li>
+              <capacity>BloodPumping</capacity>
+              <offset>0.15</offset>
+            </li>
+          </capMods>
         </li>
       </stages>
   </HediffDef>

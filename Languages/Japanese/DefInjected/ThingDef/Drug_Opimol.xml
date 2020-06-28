@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Opimol.label>オピモール軟膏</Opimol.label>
+  <Opimol.description>オピモールは穏やかな依存症の性質を持つ普通の鎮痛剤です。ヒールルートとサイコイドの葉、そして水でオートミールのような物質に加工されています。 食べる、喫煙する、またはより強力な鎮痛剤のレシピで使用される。お腹を壊すかもしれません。</Opimol.description>
+  <Opimol.ingestible.ingestCommandString>{0}を 吸う</Opimol.ingestible.ingestCommandString>
+  <Opimol.ingestible.ingestReportString>{0}を 吸っている.</Opimol.ingestible.ingestReportString>
+
+</LanguageData>

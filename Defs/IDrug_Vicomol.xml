@@ -54,7 +54,7 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>VicomolHigh</hediffDef>
-          <severity>0.60</severity>
+          <severity>0.75</severity>
           <toleranceChemical>OpimolReceptors</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
@@ -102,7 +102,7 @@
     <maxSeverity>1.0</maxSeverity>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.50</severityPerDay>
+        <severityPerDay>-1</severityPerDay>
       </li>
     </comps>
       <stages>

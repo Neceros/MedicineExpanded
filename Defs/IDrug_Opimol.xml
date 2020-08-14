@@ -105,7 +105,7 @@
     <maxSeverity>1.0</maxSeverity>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.75</severityPerDay>
+        <severityPerDay>-1</severityPerDay>
       </li>
     </comps>
       <stages>
@@ -217,7 +217,7 @@
     <description>A built-up tolerance to opimol. The more severe this tolerance is, the more opimol-based drugs like vicomol or oxymol it takes to get the same effect.</description>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.020</severityPerDay>
+        <severityPerDay>-0.030</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
         <chemical>OpimolReceptors</chemical>
@@ -254,7 +254,7 @@
     <causesNeed>OpimolChemical</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.05</severityPerDay>
+        <severityPerDay>-0.08</severityPerDay>
         <showDaysToRecover>true</showDaysToRecover>
       </li>
     </comps>

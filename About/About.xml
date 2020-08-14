@@ -4,6 +4,7 @@
   <author>Neceros</author>
   <supportedVersions>
       <li>1.1</li>
+      <li>1.2</li>
   </supportedVersions>
   <packageId>neceros.medicineexpanded</packageId>
   <description>“Let food be your medicine and medicine be your food.”\n― Hippocrates</description>

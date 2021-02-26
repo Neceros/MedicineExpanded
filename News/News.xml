@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HugsLib.UpdateFeatureDef Abstract="true" Name="UpdateFeatureBase">
+    <modNameReadable>Medicine Expanded</modNameReadable>
+    <modIdentifier>neceros.medicineexpanded</modIdentifier>
+    <linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2049984501</linkUrl>
+  </HugsLib.UpdateFeatureDef>
+  
+  <HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+    <defName>ME_1</defName>
+    <assemblyVersion>1.2.9</assemblyVersion>
+    <content>&lt;b&gt;CHANGES&lt;/b&gt;|| Opimol fixed to reduce consciousness like the other drugs do. Your colonists will no longer immediately die when you using opimol on them. Sorry.</content>
+  </HugsLib.UpdateFeatureDef>
+
+</Defs>

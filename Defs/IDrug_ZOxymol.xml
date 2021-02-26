@@ -111,7 +111,7 @@
           <label>oxymol high</label>
           <restFallFactor>1.5</restFallFactor>
           <painOffset>-0.96</painOffset>
-          <socialFightChanceFactor>0.20</socialFightChanceFactor>
+          <socialFightChanceFactor>0.10</socialFightChanceFactor>
           <vomitMtbDays>0.40</vomitMtbDays>
           <capMods>
             <li>
